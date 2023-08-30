@@ -28,3 +28,19 @@ div.links a { padding: 4pt; }
 #messages .message { margin-bottom: 6pt; }
 #messages .message.INFO { background-color: green; color: white; font-weight: 600; padding: 2pt; }
 #messages .message.WARNING { background-color: red; color: white; font-weight: 600; padding: 2pt; }
+
+
+@media only screen and (max-width:700px){
+  body{overflow-x:hidden}
+  div.links a{padding:unset;padding:3px 0}
+  footer,footer>*{margin:0 0}
+  h1{padding:0 0}
+  #command{white-space:break-spaces}
+  #topane{width:100%}
+  #topane pre{user-select:all;min-height:unset;width:unset;max-width:unset;overflow:auto}
+  #topane pre code{padding:0!important}
+  #frompane textarea{min-height:15vh;max-height:20vh}
+  .row{display:flex;flex-direction:column;gap:.25em}
+  .row textarea{width:100%}
+  .row [id]{flex:1}
+}
