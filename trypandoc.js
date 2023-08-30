@@ -231,7 +231,7 @@ function convert() {
     document.getElementById("command").textContent = commandString;
     let body = JSON.stringify(params);
     updateLinks(body);
-    fetch("/cgi-bin/pandoc-server.cgi", {
+    fetch("https://pandoc.org/cgi-bin/pandoc-server.cgi", {
       method: "POST",
       headers: {"Content-Type": "application/json",
                 "Accept": "application/json"},
@@ -494,7 +494,7 @@ function enableControlIf(ident, enable) {
       }
     });
 
-    fetch("/cgi-bin/pandoc-server.cgi/version")
+    fetch("https://pandoc.org/cgi-bin/pandoc-server.cgi/version")
        .then(handleErrors)
        .then(response => response.text())
        .then(restext =>
